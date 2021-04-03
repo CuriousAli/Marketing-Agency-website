@@ -1,8 +1,15 @@
 {% extends 'advertising/base.html' %}
 
 {% block content %}
-<h1>{{title}}</h1>
-<p>YYYYYYYYYYYYYYYYYYY</p>
-<p>YYYYYYYYYYYYYYYYYYY</p>
+
+<ul>
+    {% for t in types %}
+    <li>
+        <h2>{{t.title}}</h2>
+        <p>{{t.description}}</p>
+        <hr>
+    </li>
+    {% endfor %}
+</ul>
 
 {% endblock %}

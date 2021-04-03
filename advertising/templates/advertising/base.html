@@ -10,17 +10,24 @@
 
 </head>
 <body>
-
+<aside>
 {% block mainmenu %}
-    <ul>
+    <img src="{% static 'advertising/images/logo.png' %}" alt="Logo">
+    <span class="logo">AdSol</span>
     {% for m in menu %}
-        <li>{{m}}</li>
-    {% endfor %}
+    <ul>
+        <a href="#"><li>{{m.title}}</li></a>
     </ul>
+    {% endfor %}
 {% endblock mainmenu %}
+</aside>
 
-{% block content %}
-{% endblock %}
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
 
 </body>
 </html>

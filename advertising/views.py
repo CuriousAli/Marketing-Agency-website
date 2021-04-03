@@ -10,7 +10,7 @@ This project bases on MTV pattern. Views in final must be classes(ofc if funcion
 '''
 
 
-menu = ["Рекламные решения", "О нас", "Контактная информация"]
+menu = ["Услуги", "О нас", "Связь"]
 
 def index(request):
     types = Adver.objects.all()
