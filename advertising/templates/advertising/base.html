@@ -16,18 +16,27 @@
     <span class="logo">AdSol</span>
     {% for m in menu %}
     <ul>
-        <a href="#"><li>{{m.title}}</li></a>
+        <a href="{% url m.url_name %}"><li>{{m.title}}</li></a>
     </ul>
     {% endfor %}
+
+    <h5>Наши соц.сети</h5>
+    <a href="https://www.instagram.com"><img src="{% static 'advertising/images/insta.png' %}" alt="На интернет ресурсах" style="width:30px;height:30px;"></a>
+    <a href="https://www.facebook.com"><img src="{% static 'advertising/images/FaceBook_.png' %}" alt="На интернет ресурсах" style="width:32px;height:32px;"></a>
+    <a href="https://www.nasa.gov"><img src="{% static 'advertising/images/nasa.png' %}" alt="На интернет ресурсах" style="width:32px;height:32px;"></a>
 {% endblock mainmenu %}
 </aside>
 
 
 <main>
     {% block content %}
+
     {% endblock %}
 </main>
 
 
 </body>
+<footer>
+    <p>Created by Ali Sadretdinov. Moscow, Russia 2021.</p>
+</footer>
 </html>

@@ -1,15 +1,14 @@
 {% extends 'advertising/base.html' %}
+{% load static %}
 
 {% block content %}
 
-<ul>
-    {% for t in types %}
-    <li>
-        <h2>{{t.title}}</h2>
-        <p>{{t.description}}</p>
-        <hr>
-    </li>
-    {% endfor %}
-</ul>
+   <div class="features">
+    <h1>Выбирите интересующий вид рекламы</h1>
+   </div>
+
+   <a href="{% url 'internet' %}"><img src="{% static 'advertising/images/inet.jpg' %}" alt="На просторах интернета" title="На просторах интернета" style="width:600px;height:400px;"></a>
+   <a href="{% url 'street' %}"><img src="{% static 'advertising/images/Street.png' %}" alt="Наружная реклама" title="Наружная реклама" style="width:600px;height:400px;"> </a>
+
 
 {% endblock %}

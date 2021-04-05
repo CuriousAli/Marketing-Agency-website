@@ -5,20 +5,67 @@ from .models import *
 
 
 '''
-This project bases on MTV pattern. Views in final must be classes(ofc if funcion can't solve task by few strings of code)
+This project bases on MTV pattern. Views in final must be classes(ofc if function can't solve task by few strings of code)
 , but first of all, step by step i will create functions and after replace them on classes
 '''
 
 
-menu = ["Услуги", "О нас", "Связь"]
+menu = [{'title': 'Реклама', 'url_name': 'adver_cats'},
+        {'title': 'О нас', 'url_name': 'about'},
+        {'title': 'Связь', 'url_name': 'contacts'}
+]
+
 
 def index(request):
-    types = Adver.objects.all()
-    return render(request, 'advertising/index.html', {'types': types, 'menu': menu, 'title': 'Главная страница'})
+    context = {
+        'menu': menu,
+        'title': 'Главная страница'
+    }
+    return render(request, 'advertising/index.html', context=context)
 
 
 def advercats(request):
-    return render(request, 'advertising/advercats.html', {'menu': menu, 'title': 'Рекламные решения'})
+    context = {
+        'menu': menu,
+        'title': 'Реклама'
+    }
+    return render(request, 'advertising/advercats.html', context=context)
+
+
+def internet(request):
+    types = Adver.objects.filter()
+    context = {
+        'types': types,
+        'menu': menu,
+        'title': 'Реклама в интернете'
+    }
+    return render(request, 'advertising/internet.html', context=context)
+
+
+def street(request):
+    types = Adver.objects.filter()
+    context = {
+        'types': types,
+        'menu': menu,
+        'title': 'Наружная реклама'
+    }
+    return render(request, 'advertising/street.html', context=context)
+
+
+def about(request):
+    context = {
+        'menu': menu,
+        'title': 'О нас'
+    }
+    return render(request, 'advertising/about.html', context=context)
+
+
+def contacts(request):
+    context = {
+        'menu': menu,
+        'title': 'Связь'
+    }
+    return render(request, 'advertising/contacts.html', context=context)
 
 
 def pageNotFound(request, exception):

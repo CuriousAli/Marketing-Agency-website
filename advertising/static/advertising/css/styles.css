@@ -6,7 +6,7 @@ body {
 aside {
     float: left;
     background: #808080;
-    width: 14%;
+    width: 15%;
     padding: 2%;
     height: 100vh;
     color: #FF4500;
@@ -48,15 +48,36 @@ aside ul li:hover, aside ul a:hover {
     text-decoration: none;
     transform: scale(1.05)
 }
+aside h5 {margin-top: 500px; color: #FFFFFF}
+aside a img {margin-left: 12px; margin-top: 10px;}
 
-main .features{
+main {height: 95vh;}
+
+main .features {
     float: left;
     color: #008B8B;
     font-size: 20px;
     margin-top: 50px;
     text-align: center;
-    width: 75%;
+    width: 85%;
 }
 
-main .features h1 {font-size: 50px; color: #4B0082; font-weight: bold;}
+main .features h1 {font-size: 50px; color: #228B22; font-weight: bold;}
 main .features p {max-width: 800px; margin: 20px auto;}
+
+main a img{
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+footer{
+    float: right;
+    width: 85%;
+    height: 5vh;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
