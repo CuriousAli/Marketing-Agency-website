@@ -18,7 +18,7 @@ class Adver(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('type', kwargs={'slug_id': self.slug})
+        return reverse('post', kwargs={'post_slug': self.slug})
 
     # Created this class for customize admin panel.
     class Meta:

@@ -1,5 +1,5 @@
 from django.http import HttpResponse, Http404, HttpResponseNotFound
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .templates import *
 from .models import *
 
@@ -33,23 +33,33 @@ def advercats(request):
 
 
 def internet(request):
-    types = Adver.objects.filter()
+    posts = Adver.objects.filter(cat_id=1)
     context = {
-        'types': types,
         'menu': menu,
+        'posts': posts,
         'title': 'Реклама в интернете'
     }
     return render(request, 'advertising/internet.html', context=context)
 
 
 def street(request):
-    types = Adver.objects.filter()
+    posts = Adver.objects.filter(cat_id=2)
     context = {
-        'types': types,
         'menu': menu,
+        'posts': posts,
         'title': 'Наружная реклама'
     }
     return render(request, 'advertising/street.html', context=context)
+
+def show_post(request, post_slug):
+    post = get_object_or_404(Adver, post_slug)
+    context = {
+        'post': post,
+        'menu': menu,
+        'title': post.title,
+    }
+    return render(request, 'advertising/post.html', context=context)
+
 
 
 def about(request):

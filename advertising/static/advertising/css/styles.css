@@ -1,6 +1,5 @@
 body {
     background: #D3D3D3;
-
 }
 
 aside {
@@ -11,7 +10,6 @@ aside {
     height: 100vh;
     color: #FF4500;
     border-right: 5px solid #C0C0C0;
-
 }
 
 aside img{
@@ -32,8 +30,9 @@ aside ul{
     list-style: none;
     margin-top: 25px;
     font-size: 30px;
-
+    text-decoration: none
 }
+
 aside ul li{
     color: #FF4500;
     display: block;
@@ -48,10 +47,12 @@ aside ul li:hover, aside ul a:hover {
     text-decoration: none;
     transform: scale(1.05)
 }
+aside ul a {text-decoration: none;}
+
 aside h5 {margin-top: 500px; color: #FFFFFF}
 aside a img {margin-left: 12px; margin-top: 10px;}
 
-main {height: 95vh;}
+main {height: 95vh; width: -85%; }
 
 main .features {
     float: left;
@@ -70,6 +71,16 @@ main a img{
     margin-left: 100px;
 }
 
+
+main a{text-decoration: none;}
+
+main h6{color: #D3D3D3;}
+main h2{color: #228B22; font-size: 30px; font-weight: bold; }
+main p{color: #CD5C5C; font-size: 22px;  margin-left: 270px}
+main hr {margin-bottom: 10px}
+main img{float: left; padding: 0px}
+
+
 footer{
     float: right;
     width: 85%;
@@ -81,3 +92,25 @@ footer{
     font-size: 15px;
 }
 
+img.img-article-left {
+	max-width: 300px;
+	height: auto;
+	float: left;
+	padding: 0 10px 10px 0;
+
+}
+
+img.img-article-left.thumb {
+	max-width: 150px;
+	height: auto;
+}
+
+p.link-read-post {
+	text-align: right;
+}
+p.link-read-post a {
+	padding: 5px;
+	min-width: 100px;
+	background: #8FBC8F;
+	color: #fff;
+}

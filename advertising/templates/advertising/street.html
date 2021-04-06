@@ -1,14 +1,22 @@
 {% extends 'advertising/base.html' %}
 {% block content %}
 
-<ul>
-    {% for t in types %}
-    <li>
-        <h2>{{t.title}}</h2>
-        <p>{{t.description}}</p>
-        <hr>
-    </li>
-    {% endfor %}
+<h6>Невидимый отступ, верстаю как могу</h6>
+    <ul class="list-articles">
+	{% for post in posts %}
+
+			{% if post.image %}
+			<p><img class="img-article-left-thumb" src="{{post.image.url}}" style="width:200px;height:140px;"></p>
+			{% endif %}
+
+		<h2>{{post.title}}</h2>
+
+	{{post.description|linebreaks|truncatewords:50}}
+
+			<div class="clear"></div>
+			<p class="link-read-post"><a href="{{ post.get_absolute_url }}">Подробнее</a></p>
+            <hr>
+	{% endfor %}
 </ul>
 
 {% endblock %}
