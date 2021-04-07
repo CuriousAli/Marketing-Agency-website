@@ -1,14 +1,16 @@
 {% extends 'advertising/base.html' %}
 {% block content %}
+{% load static %}
 
-<ul>
-    {% for t in types %}
-    <li>
-        <h2>{{t.title}}</h2>
-        <p>{{t.description}}</p>
-        <hr>
-    </li>
-    {% endfor %}
-</ul>
+<address>
+  <p>Пишите нам на email: adsol@company.ru</p>
+  <p>Звоните: +987654321</p>
+  <p>Адрес: Россия, Москва, улица Пушкина д.12345</p>
+</address>
+
+    <h1>Наши соц.сети</h1>
+    <a href="https://www.instagram.com"><img src="{% static 'advertising/images/insta.png' %}" alt="На интернет ресурсах" style="width:100px;height:100px;"></a>
+    <a href="https://www.facebook.com"><img src="{% static 'advertising/images/FaceBook_.png' %}" alt="На интернет ресурсах" style="width:102px;height:102px;"></a>
+    <a href="https://www.nasa.gov"><img src="{% static 'advertising/images/nasa.png' %}" alt="На интернет ресурсах" style="width:102px;height:102px;"></a>
 
 {% endblock %}

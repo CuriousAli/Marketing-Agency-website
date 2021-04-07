@@ -3,7 +3,7 @@ from django.urls import reverse
 
 '''Drafted models structure. You can see concept down below '''
 
-
+# Main model
 class Adver(models.Model):
     title = models.CharField(max_length=255, unique=True, verbose_name='Название')
     slug = models.SlugField(unique=True, verbose_name='Слаг')
@@ -26,7 +26,7 @@ class Adver(models.Model):
         verbose_name_plural = 'Вид рекламы'
         ordering = ['actual', 'title']
 
-
+#Model for define type of adver's element
 class Category(models.Model):
     name = models.TextField(max_length=25, unique=True, db_index=True, verbose_name='Название категории')
 

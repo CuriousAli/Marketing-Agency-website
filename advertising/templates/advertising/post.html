@@ -1,13 +1,14 @@
 {% extends 'advertising/base.html' %}
 
 {% block content %}
-<h1>{{post.title}}</h1>
+    <h1>{{post.title}}</h1>
 
-{% if post.image %}
-<p><img class="img-article-left" src="{{post.image.url}}" style="width:200px;height:140px;"></p>
-{% endif %}
+    {% if post.image %}
+        <p><img class="img-article-left" src="{{post.image.url}}" style="width:200px;height:140px;"></p>
+    {% endif %}
 
-<p>{{post.description|linebreaks}}</p>
-<h3>{post.price}}</h3>
+    <p>{{post.description|linebreaks}}</p>
+
+    <h3>Стоимость услуги: <span>{{post.price}}</span> у.е.</h3>
 
 {% endblock %}
